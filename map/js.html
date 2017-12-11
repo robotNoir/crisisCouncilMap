@@ -2,17 +2,25 @@
 $(function() {
 
   // GLOBAL LINKS FOR MAP AND SPREADSHEET
-  const geojsonUrl = "https://raw.githubusercontent.com/robotNoir/crisisCouncilMap/geographies/britain867.geojson";
-  const publicSpreadsheet = {key: "15iCoabIz8Q9_H4x14A6WX34iicPvOgoDp8zJp3P03-A", sheets: ["Realms", "Provinces", "Holdings"]};
+  const geojsonUrl = "https://raw.githubusercontent.com/robotNoir/crisisCouncilMap/geographies/britain867.geojson"; // url to hosted geojson geography file
+  const publicSpreadsheet = {key: "15iCoabIz8Q9_H4x14A6WX34iicPvOgoDp8zJp3P03-A", sheets: ["Realms", "Provinces", "Holdings"]}; // google sheets key, and sheet names, for backend data (ensure sharing is on)
+  const attributionText = "Britain 867 CC"; // text to appear in bottom right attribution of map
+  const geojsonCRS = L.CRS.EPSG4326; // CRS for geojson file (ideally as EPSG4326)
+  const geojsonCentre = [160.0, 225.0]; // approximate centre point of geojson geography file to focus map on
   
   // SETUP MAP AND SPINNER
-  var spinner, spinnerOptions, map, mapOptions, legend, layers, data;
+  var spinner, spinnerOptions, map, mapOptions, layers, data;
   
   spinnerOptions = {lines: 11, length: 15, width: 5, radius: 15, scale: 1, corners: 1, color: '#000', opacity: 0.25, rotate: 0, direction: 1, speed: 0.7, trail: 31, fps: 20, zIndex: 2e9, className: 'spinner', top: '50%', left: '50%', shadow: false, hwaccel: false, position: 'absolute'};
-  spinner = new Spinner(spinnerOptions).spin(document.getElementById('map));
+  spinner = new Spinner(spinnerOptions).spin(document.getElementById('map'));
   
-  mapOptions = {center: [160.0, 225.0], zoom: 1, crs: L.CRS.EPSG4326, attributionControl: false}; // note: ensure geojson is in EPSG4326, and change center to point near center for better intial amination                                                                   
+  mapOptions = {center: geojsonCentre, zoom: 1, crs: geojsonCRS, attributionControl: false}; 
   map = L.map('map', mapOptions);
-                                             
+  
+  // ADD ZOOM AND ATTRIBUTION CONTROLS
+  L.control.zoom({position: 'topright'}).addTo(map);
+  L.control.attribution({prefix: attributionText}).addTo(map);
+  layers = L.control.layers();
+  
 });
 </script>
