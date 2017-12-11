@@ -31,7 +31,35 @@ $(function() {
   }
   
   // ASYNC CALLBACK TO POPULATE MAP ONCE GEOJSON AND BACKEND JSON DATA RECIEVED
-  function populateMap(geography, data) {}
+  function populateMap(geography, data) {
+    var provinces, terrain, searchControl;
+    var occupierPatterns = {};
+    
+    // create leaflet geojson layers
+    provinces = L.geoJson(geography, {style: stylePoltical, onEachFeature: onEachProvinceFeature});
+    terrain = L.geoJson(geography, {style: styleTerrain, onEachFeature: onEachProvinceFeature});
+    
+    // stop the loading animation, add geojson layer to map and centre map
+    spinner.stop();
+    provinces.addTo(map);
+    map.fitBounds(provinces.getBounds());
+    
+    // setup layers control with political/terrain options
+    layers.addBaseLayer(provinces, 'Political');
+    layers.addBaseLayer(terrain, 'Terrain');
+    layers.addTo(map)
+    
+    // setup and add search control for province names
+    searchControl = new L.Control.Search({
+      layer: provinces,
+      propertyName: 'countyName',
+      hideMarkerOnCollapse: true,
+      zoom: 2,
+      moveToLocation: function(latlng, title, map) { map.setView(latlng, 2); }
+    });
+    searchControl.on('search:locationfound', function(e) { if(e.layer._popup) { e.layer.openPopup() } };
+    map.addControl(searchControl);
+  }
   
 });
 </script>
