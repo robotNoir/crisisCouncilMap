@@ -4,6 +4,15 @@ $(function() {
   // GLOBAL LINKS FOR MAP AND SPREADSHEET
   const geojsonUrl = "https://raw.githubusercontent.com/robotNoir/crisisCouncilMap/geographies/britain867.geojson";
   const publicSpreadsheet = {key: "15iCoabIz8Q9_H4x14A6WX34iicPvOgoDp8zJp3P03-A", sheets: ["Realms", "Provinces", "Holdings"]};
-
+  
+  // SETUP MAP AND SPINNER
+  var spinner, spinnerOptions, map, mapOptions, legend, layers, data;
+  
+  spinnerOptions = {lines: 11, length: 15, width: 5, radius: 15, scale: 1, corners: 1, color: '#000', opacity: 0.25, rotate: 0, direction: 1, speed: 0.7, trail: 31, fps: 20, zIndex: 2e9, className: 'spinner', top: '50%', left: '50%', shadow: false, hwaccel: false, position: 'absolute'};
+  spinner = new Spinner(spinnerOptions).spin(document.getElementById('map));
+  
+  mapOptions = {center: [160.0, 225.0], zoom: 1, crs: L.CRS.EPSG4326, attributionControl: false}; // note: ensure geojson is in EPSG4326, and change center to point near center for better intial amination                                                                   
+  map = L.map('map', mapOptions);
+                                             
 });
 </script>
