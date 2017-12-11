@@ -61,5 +61,39 @@ $(function() {
     map.addControl(searchControl);
   }
   
+  // returns political layer style for given feature
+  function stylePolitical(feature) {
+    var province = getProvinceData(feature.properties.ID);
+    
+    return {weight: 0.25, opacity: 1, color: 'black', fillOpacity: 0.6, fillColor: getOwnerData(province.owner).mapColour}
+  }
+  
+  // returns terrain layer style for given feature
+  function styleTerrain(feature) {
+    return {weight: 0.25, opacity: 1, color: 'black', fillOpacity: 0.6, fillColor: getProvinceData(feature.properties.ID).terrainColour}
+  }
+  
+  function onEachProvinceFeature(feature, layer) {
+    layer.on({
+      mouseover: function(e) { e.target.setStyle({weight: 1, color: '#999', fillOpacity: 1}); },
+      mouseout: function(e) { e.target.setStyle({weight: 0.25, color: 'black', fillOpacity: 0.6}); }
+    });
+  }
+  
+  // gets and returns object with owner data for the provided owner
+  function getOwnerData(owner) {
+    return data.Realms.elements.filter(function(owns) { return owns.realms == owner })[0];
+  }
+    
+  // gets and returns object with province data for the provided id
+  function getProvinceData(id) {
+    return data.Provinces.elements.filter(function(province) { return province.provinceID == id })[0];
+  }
+  
+  // gets and returns array of holding objects for the provided province id
+  function getHoldingsData(id) {
+    return data.Holdings.elements.filter(function(holding) { return holding.provideID == id });
+  }
+  
 });
 </script>
