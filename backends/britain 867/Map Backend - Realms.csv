@@ -1,0 +1,28 @@
+realms,mapColour,role
+Cornwall,#975d49,NPC
+Deheubarth,#ff6699,Player
+East Anglia,#ff9900,Player
+Nordenheim,#0d0d0d,Player
+Jorvik,#0d0d0d,Player
+Mercia,#ffff00,Player
+Northumbria,#4bb3cd,Player
+Powys,#0000ff,NPC
+Scotland,#085caf,Player
+Strathclyde,#cc9900,NPC
+Wessex,#1fa1c1,Player
+Airgialla,#048b4c,NPC
+Briefne,#05b362,NPC
+Connatcha,#06db77,NPC
+Deashumhain,#60fbb3,NPC
+Hjaltland,#ff3399,NPC
+Laigin,#affdd9,NPC
+Mide,#023c21,NPC
+Osraige,#10f98c,NPC
+Orkney,#ff3300,NPC
+Tir Chonaill,#01140b,NPC
+Tuadhmhumhain,#38fa9f,NPC
+Ulaidh,#036336,NPC
+Urahumhain,#88fcc6,NPC
+None,#000000,-
+Petty Kingdom of Strathearn,#f4ee42,NPC
+West Frankia,#d3d3d3,NPC

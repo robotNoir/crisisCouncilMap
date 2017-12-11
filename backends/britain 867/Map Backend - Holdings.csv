@@ -1,0 +1,186 @@
+provinceID,owner,occupier,holdingType,holdingName,tax,defence
+3,Tir Chonaill,,Church,Ráth Bhoth,17.52,10
+3,Tir Chonaill,,Tribal Village,Tir Chonaill,2.01,5
+4,Mide,,Church,Daire Coluimb Chille,16.99,10
+4,Mide,,Castle,Tir Eoghain,3.96,5
+5,Ulaidh,,Church,Con Doire,13.48,10
+5,Ulaidh,,Tribal Village,Ulaidh,2.00,5
+7,Airgialla,,Church,Ard Mhacha,12.23,10
+7,Airgialla,,Tribal Village,Airgialla,1.77,5
+8,Briefne,,Church,Ceann Lios,18.06,10
+8,Briefne,,Tribal Village,Bréifne,2.88,5
+9,Connatcha,,Church,Tuaim Dá Ghualann,14.29,10
+9,Connatcha,,Tribal Village,Connachta,1.34,5
+10,Mide,,Church,Naomh Brigid,14.29,10
+10,Mide,,Tribal Village,Cill Dara,3.72,5
+11,Mide,,Town,Dyflinn,4.55,10
+11,Mide,,Church,Mellifont,3.15,10
+12,Osraige,,Church,Cluain Mhic Nóis,16.45,10
+12,Osraige,,Tribal Village,Osraige,1.98,5
+13,Tuadhmhumhain,,Church,Cill Dálua,15.37,10
+13,Tuadhmhumhain,,Tribal Village,Tuadhmhumhain,3.54,5
+14,Deashumhain,,Church,Cluain,14.29,10
+14,Deashumhain,,Tribal Village,Deasmhumhain,2.52,5
+15,Urahumhain,,Church,Dún Caiseal,12.67,10
+15,Urahumhain,,Tribal Village,Urmhumhain,2.76,5
+16,Laigin,,Church,Fearna Mór Maedhóg,16.45,10
+16,Laigin,,Tribal Village,Laigin,2.72,5
+17,Mercia,,Castle,Hereford,11.60,40
+17,Mercia,,Church,St Ethelberts,16.99,10
+17,Mercia,,Town,Leominster,22.12,10
+18,Deheubarth,,Castle,Dinefwr,10.87,40
+18,Deheubarth,,Church,Tyddewi,14.83,10
+18,Deheubarth,,Town,Carmarthen,29.05,10
+19,Deheubarth,,Castle,Cardiff,10.87,40
+19,Deheubarth,,Church,Llandaff,18.06,10
+19,Deheubarth,,Town,Swansea,32.09,10
+20,Deheubarth,,Castle,Caerwent,7.96,40
+20,Deheubarth,,Church,Monmouth,17.26,10
+20,Deheubarth,,Town,Newport,18.70,10
+21,Wessex,,Castle,Gloucester,12.14,40
+21,Wessex,,Church,Winchcombe,14.29,10
+21,Wessex,,Town,Bristol,25.06,10
+22,Wessex,Mercia,Castle,Reading,13.05,40
+22,Wessex,Mercia,Castle,Buckingham,11.96,35
+22,Wessex,Mercia,Church,Abingdon,18.60,10
+22,Wessex,Mercia,Town,Oxford,22.93,10
+23,Wessex,,Castle,Wilton,8.88,40
+23,Wessex,,Church,Salisbury,15.91,10
+23,Wessex,,Town,Sarum,18.10,10
+24,Wessex,,Castle,Lambeth,10.87,40
+24,Wessex,,Church,Southwark,15.37,10
+24,Wessex,,Town,Woking,23.73,10
+25,Wessex,,Castle,Arundel,10.51,40
+25,Wessex,,Church,Chichester,16.45,10
+25,Wessex,,Town,Lewes,29.41,10
+26,Wessex,,Castle,Winchester,13.05,40
+26,Wessex,,Church,St Swithun,13.21,10
+26,Wessex,,Town,Southampton,29.41,10
+27,Wessex,,Castle,Wareham,9.00,40
+27,Wessex,,Church,Corfe,16.50,10
+27,Wessex,,Town,Dorchester,28.50,10
+28,Wessex,,Castle,Bath,8.00,40
+28,Wessex,,Church,Wells,8.00,10
+28,Wessex,,Town,Ilchester,34.00,10
+29,Wessex,,Castle,Lydford,10.00,40
+29,Wessex,,Church,Exeter,11.00,10
+29,Wessex,,Town,Axminster,31.00,10
+30,Mercia,,Castle,Evesham,11.96,40
+30,Mercia,,Church,Worcester,17.79,10
+30,Mercia,,Town,Droitwich,22.93,10
+31,Wessex,,Castle,Tintagel,9.28,40
+31,Wessex,,Church,St Germans,17.79,10
+31,Wessex,,Town,Bodmin,26.21,10
+32,Wessex,,Castle,Westminster,13.77,40
+32,Wessex,,Castle,Tottenham,8.52,40
+32,Wessex,,Church,St Pauls,17.52,10
+32,Wessex,,Town,London,23.85,10
+34,Hjaltland,,Tribal Village,Hjaltland,0.75,5
+35,Nordenheim,,Church,Iona,17.00,10
+35,Nordenheim,,Tribal Village,Sudreyjar,3.00,5
+36,Nordenheim,,Church,Kyrkovik,14.52,10
+36,Nordenheim,,Tribal Village,Orknö,1.03,5
+37,Nordenheim,,Tribal Village,Caithness,1.86,5
+37,Nordenheim,,Church,Dornoch,14.83,10
+38,Nordenheim,,Castle,Jedburgh,3.00,40
+38,Nordenheim,,Church,Melrose,8.00,10
+39,Nordenheim,,Church,Rosemarkie,16.72,10
+39,Nordenheim,,Tribal Village,Ross,3.90,5
+40,Nordenheim,,Church,Elgin,16.05,10
+40,Nordenheim,,Tribal Village,Moray,2.30,5
+41,Nordenheim,,Church,St Machar,18.60,10
+41,Nordenheim,,Tribal Village,Buchan,4.62,5
+42,Nordenheim,,Church,Dunblane,18.06,10
+42,Nordenheim,,Tribal Village,Strathearn,2.60,5
+43,Nordenheim,,Tribal Village,Gowrie,4.12,5
+43,Nordenheim,,Church,Dunkeld,14.29,10
+43,Nordenheim,,Castle,Gowrie,10.73,45
+44,Nordenheim,,Church,Fortingall,16.18,10
+44,Nordenheim,,Tribal Village,Atholl,2.74,5
+45,Nordenheim,,Church,St Moluag,19.00,10
+45,Nordenheim,,Castle,Argyll,10.00,40
+46,Nordenheim,,Tribal Village,Fife,2.52,5
+46,Nordenheim,,Church,St Andrews,15.37,10
+47,Nordenheim,,Tribal Village,Alt Clut,1.00,3
+47,Nordenheim,,Church,Cyndeyrn Sant,3.00,4
+48,Nordenheim,,Castle,Stirling,5.33,40
+48,Nordenheim,,Church,Abercorn,13.37,10
+49,Nordenheim,,Tribal Village,Aeron,0.96,5
+49,Nordenheim,,Church,Croes Rhygal,7.15,10
+50,Nordenheim,,Tribal Village,Nofant,0.94,5
+50,Nordenheim,,Church,Tygwyn,7.78,10
+51,Nordenheim,,Castle,Dunbar,7.87,40
+51,Nordenheim,,Church,Tyninghame,13.91,10
+52,Nordenheim,,Castle,Bamburgh,11.00,40
+52,Nordenheim,,Church,Lindisfarne,17.45,10
+52,Nordenheim,,Town,Newcastle,30.00,10
+53,Nordenheim,,Castle,Burgh,8.65,40
+53,Nordenheim,,Church,Carlisle,13.00,10
+53,Nordenheim,,Town,Penrith,33.50,10
+54,Nordenheim,,Castle,Mann,13.75,40
+55,Nordenheim,,Castle,Appleby,9.23,40
+55,Nordenheim,,Church,Cartmel,13.00,10
+55,Nordenheim,,Town,Lowther,21.50,10
+56,Nordenheim,,Castle,Durham,10.50,40
+56,Nordenheim,,Church,St Cuthbert,16.50,10
+56,Nordenheim,,Town,Hartlepool,30.00,10
+57,Nordenheim,,Castle,Jorvik,11.00,40
+57,Nordenheim,,Castle,Richmond,11.00,10
+57,Nordenheim,,Church,St Peters,17.00,10
+57,Nordenheim,,Town,Skardaborg,34.00,10
+58,Nordenheim,,Castle,Lancaster,12.00,40
+58,Nordenheim,,Church,Furness,13.00,10
+58,Nordenheim,,Town,Preston,22.89,10
+59,Mercia,,Castle,Chester,12.69,43
+59,Mercia,,Church,Halton,15.91,10
+59,Mercia,,Town,Macclesfield,39.04,10
+60,Deheubarth,,Castle,Rhuddlan,11.78,40
+60,Deheubarth,,Church,Llanelwy,15.37,10
+60,Deheubarth,,Town,Denbigh,27.27,10
+61,Mercia,,Castle,Gainsborough,6.82,43
+61,Mercia,,Church,Lincoln,13.17,10
+61,Mercia,,Town,Boston,25.15,10
+62,Mercia,,Castle,Leicester,10.87,43
+62,Mercia,,Church,Newstead,16.99,10
+62,Mercia,,Town,Nottingham,18.10,10
+63,Mercia,,Castle,Derby,12.87,43
+63,Mercia,,Church,Burton,13.21,10
+63,Mercia,,Town,Chesterfield,25.74,10
+64,Deheubarth,,Church,Bangor Fawr,14.83,10
+64,Deheubarth,,Town,Caernarfon,27.27,10
+64,Deheubarth,,Castle,Aberffraw,11.78,40
+65,Deheubarth,,Castle,Mathrafal,11.78,40
+65,Deheubarth,,Church,Llangollen,17.79,10
+65,Deheubarth,,Town,Radnor,22.12,10
+66,Mercia,,Castle,Ludlow,10.87,40
+66,Mercia,,Church,Wenlock,14.83,10
+66,Mercia,,Town,Shrewsbury,25.34,10
+67,Mercia,,Castle,Tamworth,10.87,40
+67,Mercia,,Castle,Warwick,15.40,10
+67,Mercia,,Church,Coventry,14.83,10
+67,Mercia,,Town,Stafford,28.96,10
+68,Mercia,Wessex,Castle,Northampton,8.09,40
+68,Mercia,Wessex,Church,Crowland,12.13,10
+68,Mercia,Wessex,Town,Cambridge,26.95,10
+69,Mercia,Wessex,Castle,Bedford,10.15,40
+69,Mercia,Wessex,Church,St Albans,16.99,10
+69,Mercia,Wessex,Town,Hertford,22.93,10
+70,Wessex,,Castle,Thetford,4.00,40
+70,Wessex,,Church,Norwich,12.00,10
+70,Wessex,,Town,Lynn,17.00,10
+71,Wessex,,Castle,Ipswich,7.00,40
+71,Wessex,,Church,Ely,5.00,10
+71,Wessex,,Town,Bury,18.00,10
+72,Wessex,,Castle,Colchester,9.32,40
+72,Wessex,,Church,Waltham,15.37,10
+72,Wessex,,Town,Maldon,33.69,10
+73,Wessex,,Castle,Dover,13.05,40
+73,Wessex,,Church,Canterbury,15.50,10
+73,Wessex,,Church,Rochester,15.00,10
+73,Wessex,,Town,Sandwich,22.50,10
+22,Wessex,,Church,Oxford,15.33,10
+58,Nordenheim,,Castle,Jorvik's Castle,12.00,40
+67,Mercia,,Church,Cuthbert,15.50,10
+19,Deheubarth,,Town,Sheepville,21.05,10
+52,Nordenheim,,Castle,Newcastle,0.00,0
+56,Nordenheim,,Church,Hartlepool,12.85,10
