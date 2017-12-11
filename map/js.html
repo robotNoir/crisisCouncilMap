@@ -63,9 +63,20 @@ $(function() {
   
   // returns political layer style for given feature
   function stylePolitical(feature) {
+    var style = {weight: 0.25, opacity: 1, color: 'black', fillOpacity: 0.6};
     var province = getProvinceData(feature.properties.ID);
     
-    return {weight: 0.25, opacity: 1, color: 'black', fillOpacity: 0.6, fillColor: getOwnerData(province.owner).mapColour}
+    // checks if province is occupied, if it is then generate a pattern and adds it to occupierpatterns object
+    if(province.occupier != "") {
+      var patternName = province.owner + '-' + province.occupier;
+      if(!occupierPatterns.hasOwnProperty(patternName) {
+        occupierPatterns[patternName] = new L.StripePattern({color: getOwnerData(province.owner).mapColour, spaceColor: getOwnerData(province.occupier).mapColour, spaceOpacity: 1, angle: -45});
+        occupierPatterns[patternName].addTo(map);
+      }
+      style.fillColor = occupierPatterns[patternName];
+    }
+    else { style.fillColor = getOwnerData(province.owner).mapColour }
+    return style;
   }
   
   // returns terrain layer style for given feature
@@ -87,10 +98,12 @@ $(function() {
         var output =  '<h3>' + province.provinceName + '</h3>';
             output += '<p><b> Owned by: ' + province.owner + '   ( ' + getOwnerRole(province.owner) + ' )</b></p>';
             output += '<p><b>ID: </b>' + province.provinceID + ' | <b>Terrain: </b>' + province.terrain + '</p>';
+            if(!province.occupier == "") { output += '<p><b> OCCUPIED BY: ' + province.occupier + '</b></p>'};
             output += '<table class="provinceHoldings">';
             output += '<tr><th>Name</th><th>Type</th></tr>';
             for(i=0; i<holdings.length; i++) {
-              output += '<tr><td>' + holdings[i].holdingName + '</td><td>' + holdings[i].holdingType + '</td></tr>';
+              if( holdings[i].occupier != '') { output += '<tr style="color: red"><td style="color: red">' + holdings[i].holdingName + '</td><td style="text-color: red">' + holdings[i].holdingType + '</td></tr>'; }
+              else { output += '<tr><td>' + holdings[i].holdingName + '</td><td>' + holdings[i].holdingType + '</td></tr>'; }
             }
             output += '</table>'
         
