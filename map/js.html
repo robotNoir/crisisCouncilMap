@@ -22,5 +22,16 @@ $(function() {
   L.control.attribution({prefix: attributionText}).addTo(map);
   layers = L.control.layers();
   
+  // GET GOOGLE SHEETS BACKEND DATA VIA TABLETOP
+  Tabletop.init({key: publicSpreadsheet.key, wanted: publicSpreadsheet.sheets, parseNumbers: true, callback: getGeoJSON});
+  
+  // ASYNC CALLBACK TO GET GEOJSON DATA ONCE BACKEND JSON DATA RECIEVED
+  function getGeoJSON(data, tabletop) {
+    google.script.run.withSuccessHandler(populateMap).withUserObject(data).getGeoJSON(geojsonUrl);
+  }
+  
+  // ASYNC CALLBACK TO POPULATE MAP ONCE GEOJSON AND BACKEND JSON DATA RECIEVED
+  function populateMap(geography, data) {}
+  
 });
 </script>
