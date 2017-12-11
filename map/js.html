@@ -78,6 +78,25 @@ $(function() {
       mouseover: function(e) { e.target.setStyle({weight: 1, color: '#999', fillOpacity: 1}); },
       mouseout: function(e) { e.target.setStyle({weight: 0.25, color: 'black', fillOpacity: 0.6}); }
     });
+    
+    if(feature.properties) {
+      layer.bindPopup( function() {
+        var province = getProvinceData(feature.properties.ID);
+        var holdings = getHoldingsData(province.provinceID);
+        
+        var output =  '<h3>' + province.provinceName + '</h3>';
+            output += '<p><b> Owned by: ' + province.owner + '   ( ' + getOwnerRole(province.owner) + ' )</b></p>';
+            output += '<p><b>ID: </b>' + province.provinceID + ' | <b>Terrain: </b>' + province.terrain + '</p>';
+            output += '<table class="provinceHoldings">';
+            output += '<tr><th>Name</th><th>Type</th></tr>';
+            for(i=0; i<holdings.length; i++) {
+              output += '<tr><td>' + holdings[i].holdingName + '</td><td>' + holdings[i].holdingType + '</td></tr>';
+            }
+            output += '</table>'
+        
+         return output;
+      } );
+    }
   }
   
   // gets and returns object with owner data for the provided owner
