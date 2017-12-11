@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <!-- INCLUDE style.css CSS AND LEAFLET CSS-->
+    <?!= include('style'); ?>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  </head>
+  <body>
+    <!-- CREATE DIV FOR MAP TO POPULATE-->
+    <div id="map"></div>
+    <!-- INCLUDE JAVASCRIPT: Jquery, Spin.js, Leaflet, Leaflet.pattern, Leafet.Omnivore, Leaflet.search, Tabletop and custom js.js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <?!= include('spin.js'); ?>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <?!= include('leaflet.pattern.js'); ?>
+    <?!= include('leafletsearch.js'); ?>
+    <?!= include('papaparse.js'); ?>
+    <?!= include('js'); ?>
+  </body>
+</html>
+
+
+
